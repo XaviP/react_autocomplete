@@ -31,6 +31,7 @@ class CustomAutocomplete extends React.Component {
   render() {
     return (
       <div className="CustomAutocomplete">
+        <br /><br />
         <Autocomplete
           getItemValue={(item) => item}
           items={this.state.matchingValues}
@@ -44,6 +45,7 @@ class CustomAutocomplete extends React.Component {
           }}
           onSelect={(value, item) => {
             this.setState({ value, matchingValues: [ item ] })
+            alert('You have sellected item ' + value)
           }}
         />
       </div>
